@@ -1,10 +1,13 @@
 .left-column
-  %h2 We're making one aspect of life easier for parents of multiples:
+  %h2.body_text We're making one aspect of life easier for parents of multiples:
 
+  = image_tag "homepage/owl_44_44.png"
   %h3 buying and selling gently used sets of clothes!
-
-  = link_to "Shop Now!", auctions_path, class: "button primary"
-
+  .clear
+  //= link_to "Shop Now!", auctions_path, class: "button primary", id: "shop-now"
+  = image_tag "homepage/left_2_shop_now.png"
+  .clear
+  = image_tag "homepage/tree.png", id: "tree"
 .right-column
   #child_images
     = image_tag "children/twins.jpg"

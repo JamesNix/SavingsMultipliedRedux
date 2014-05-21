@@ -1,3 +1,6 @@
+@import url(http://fonts.googleapis.com/css?family=Marko+One);
+@import url(http://fonts.googleapis.com/css?family=Corben:400,700);
+
 header, footer {
   ul {
     li {
@@ -6,17 +9,226 @@ header, footer {
   }
 }
 
+.clear {
+  clear: both;
+}
+
+#spacer {
+  width: 100%;
+  height: 2em;
+  margin: 5%;
+}
+
+body {
+  background: linear-gradient(#D0F3F1 300px, #5BCED3 0px);
+}
+
+#devise_navigation {
+  position: relative;
+  top: 3em;
+  margin: 0 auto;
+  padding: 2em;
+  width: 60%;
+  height: 2em;
+  #sign-in {
+    border-right: 1pt solid #5BCED3;
+  }
+  li {
+    list-style-type: none;
+    float: right;
+    padding: 0 .4em;
+
+    a {
+      color: #5BCED3;
+    }
+  }
+}
+
+#main_container {
+  margin: 0 auto;
+  padding: 1em;
+  background-color: white;
+  border-radius: 2em;
+  width: 65%;
+}
+
+#header_img {
+  position: relative;
+  float: left;
+  margin-bottom: -1em;
+  width: 50%;
+  bottom: 1em;
+  right: .3em;
+}
+
+#site_navigation {
+  float: left;
+  width: 50%;
+  text-align: center;
+  margin-top: 2em;
+  margin-bottom: .3em;
+  li {
+    padding: 0 1.7em;
+    border-radius: 1em;
+  }
+  a {
+    color: white;
+    font-size: .8em;
+    font-weight: 300;
+
+  }
+  #about_link {
+    background-color: rgba(91, 206, 211, 1);
+  }
+  #contact_link {
+    background-color: rgba(122, 192, 45, 1);
+  }
+  #blog_link {
+    background-color: rgba(125, 50, 145, 1);
+  }
+  #press_link {
+    background-color: rgba(237, 72, 142, 1);
+  }
+}
+
+#subhead {
+  text-align: center;
+  color: rgba(91, 206, 211, 1);
+  font-size: .8em;
+  font-family: 'Marko One', serif;
+}
+
+#main_navigation {
+  text-align: center;
+  width: 100%;
+  list-style-type: none;
+  display: inline-flex;
+  font-family: 'Corben', cursive;
+  font-weight: 700;
+  background-color: rgba(246, 198, 210, 1);
+  height: 40px;
+  position: relative;
+  top: 210px;
+  padding-left: 22%;
+  li {
+    margin: .5em 1em;
+    a {
+      color: rgba(119, 13, 72, 1);
+    }
+    .search-query {
+      border: 1px solid rgba(237, 72, 142, 1);
+      border-radius: 1em;
+      color: rgba(247, 199, 211, 1);
+      width: 15%;
+      float: right;
+    }
+  }
+
+
+}
+
+
+
+#new_auction_search {
+  input, label {
+    display: none;
+    width: 0;
+  }
+  #auction_search_search_term {
+    width: 50%;
+    height: 1.9em;
+    padding-left: 15%;
+    border: 2px solid rgba(241, 147, 165, 1);
+    border-radius: 1em;
+    background-image: asset-data-url("search_icon.png");
+    background-repeat: no-repeat;
+    background-position: 0 50%;
+    position: relative;
+    bottom: 0.2em;
+    right: 3em;
+    display: inline;
+  }
+}
+
 #content {
   @include grid-row();
+  .body_text {
+    font-family: 'Marko One', serif;
+    font-size: 1em;
+    color: rgba(122, 192, 45, 1);
+  }
+  h3 {
+    font-size: 77%;
+    padding-top: 1em;
+    color: rgba(91, 206, 211, 1);
+    float: right;
+    font-family: 'Marko One', serif;
+  }
+
+  #shop-now {
+    float: right;
+    margin-top: 1em;
+    margin-right: 2em;
+    border-radius: 1em;
+    background-color: rgba(237, 72, 142, 1);
+    padding: .5em 2em;
+    font-size: .7em;
+  }
+
+  #tree {
+    float: right;
+    position: relative;
+    top: 13em;
+  }
 
   $left-column-size: 6;
   $right-column-size: 12 - $left-column-size;
+
+  #child_images img{
+    margin-bottom: 1em;
+    padding-left: 7%;
+  }
   .left-column {
     @include grid-column($left-column-size);
+    padding-left: 0;
+    padding-right: 0;
   }
   .right-column {
     @include grid-column($right-column-size);
+    padding-left: 0;
+    padding-right: 0;
   }
+}
+
+#callouts {
+  padding: 0;
+  img {
+    padding: 0;
+  }
+}
+
+footer {
+  width: 40%;
+  height: 100px;
+  margin: 1em auto;
+  font-size: .8em;
+  ul {
+    margin: 0 auto;
+  }
+  li {
+    border-right: 1pt solid white;
+    display: inline;
+    margin: 1.5em 0;
+    padding: .5em;
+    font-weight: light;
+    a {
+      color: white;   //change this color to top light blue
+    }
+  }
+}
+
+#last {
+  border-right: none;
 }
 
 $small-range: (0em, 30em); /* 0, 640px */
