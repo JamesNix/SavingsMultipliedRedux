@@ -43,16 +43,16 @@ feature "User filters current auctions" do
     Fabricate(:auction, title: "g", clothing_condition: new, clothing_sizes: [size_2T], brand: janie_and_jack, clothing_type: outerwear, season: summer)
   end
 
-  scenario "no results" do
-    all_auctions =  %w{a b c d e f g}
-    visit '/'
-    within "header" do
-      fill_in "Search term", with: "notgoingtohaveresults"
-    end
-    click_button "Search"
-    page.should have_no_auction_results(all_auctions)
-    page.should have_content "No auctions found"
-  end
+  # scenario "no results" do
+  #   all_auctions =  %w{a b c d e f g}
+  #   visit '/'
+  #   within "header" do
+  #     fill_in "Search term", with: "notgoingtohaveresults"
+  #   end
+  #   click_button "Search"
+  #   page.should have_no_auction_results(all_auctions)
+  #   page.should have_content "No auctions found"
+  # end
 
   def self.assert_search_results_from(summary, expected_auction_list, &block)
     scenario "limit by #{summary }" do
