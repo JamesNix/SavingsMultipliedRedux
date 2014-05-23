@@ -1,6 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Marko+One);
 @import url(http://fonts.googleapis.com/css?family=Corben:400,700);
 
+
 header, footer {
   ul {
     li {
@@ -49,7 +50,7 @@ body {
   padding: 1em;
   background-color: white;
   border-radius: 2em;
-  width: 65%;
+  width: 70%;
 }
 
 #header_img {
@@ -135,7 +136,7 @@ body {
     width: 0;
   }
   #auction_search_search_term {
-    width: 50%;
+    width: 60%;
     height: 1.9em;
     padding-left: 15%;
     border: 2px solid rgba(241, 147, 165, 1);
@@ -165,16 +166,6 @@ body {
     font-family: 'Marko One', serif;
   }
 
-  // #shop_now {
-  //   float: right;
-  //   margin-top: 1em;
-  //   margin-right: 2em;
-  //   border-radius: 1em;
-  //   background-color: rgba(237, 72, 142, 1);
-  //   padding: .5em 2em;
-  //   font-size: .7em;
-  // }
-
   #tree {
     float: right;
     position: relative;
@@ -202,6 +193,7 @@ body {
 
 #callouts {
   padding: 0;
+  text-align: center;
   img {
     padding: 0;
   }
@@ -214,6 +206,7 @@ footer {
   font-size: .8em;
   ul {
     margin: 0 auto;
+    text-align: center;
   }
   li {
     border-right: 1pt solid white;
@@ -222,7 +215,7 @@ footer {
     padding: .5em;
     font-weight: light;
     a {
-      color: white;   //change this color to top light blue
+      color: #D0F3F1;
     }
   }
 }
@@ -247,11 +240,73 @@ $small-only: "#{$screen} and (max-width: 40em)" !default;
 
   $left-column-size: 4;
   $right-column-size: 12 - $left-column-size;
-  #auction_search_sidebar {
+  $auction-bg-color: rgba(232, 251, 207, 1);
+  $auction-font-color: rgba(82, 130, 27, 1);
+
+
+
+  .auction_left {
     @include grid-column($left-column-size);
+    float: left;
+    background-color: $auction-bg-color;
+    border-radius: 2em;
+    #auction_search_sidebar {
+      a {
+        color: $auction-font-color;
+      }
+      #auction-search-box {
+        background-color: 4auction-bg-color;
+      }
+      h3 {
+        padding-right: 25%;
+        color: rgba(82, 130, 27, 1)
+      }
+    }
   }
-  #auctions {
+
+  .auction_right {
     @include grid-column($right-column-size);
+    float: right;
+    .breadcrumb_navigation {
+      list-style: none;
+      margin: 1em;
+      a {
+        color: $auction-font-color;
+      }
+    }
+
+    #auction_sort {
+      margin: 1em;
+      width: 6em;
+      color: $auction-font-color;
+    }
+
+    #auctions {
+
+      .auction {
+        display: inline-block;
+        width: 130px;
+        height: 170px;
+        margin: 1em 0;
+
+        .auction_image {
+          background-color: $auction-bg-color;
+          margin: 0 .8em 0 .8em;
+          width: 100px;
+          height: 100px;
+        }
+        .auction_title{
+          width: 95%;
+          text-align: center;
+          margin: 0 auto;
+          padding: .5em;
+          span {
+            color: $auction-font-color;
+            text-align: center;
+          }
+        }
+      }
+    }
   }
 }
 
