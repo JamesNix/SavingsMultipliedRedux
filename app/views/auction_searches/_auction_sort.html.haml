@@ -1,5 +1,4 @@
 #auction_sort
-  %span Sort by:
   = simple_form_for @auction_search, url: auctions_path, html: { method: :get } do |f|
     = f.input :child_configuration_id, as: :hidden
     = f.input :search_term, as: :hidden

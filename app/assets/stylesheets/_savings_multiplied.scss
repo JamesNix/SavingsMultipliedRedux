@@ -116,38 +116,26 @@ body {
     a {
       color: rgba(119, 13, 72, 1);
     }
-    .search-query {
-      border: 1px solid rgba(237, 72, 142, 1);
-      border-radius: 1em;
-      color: rgba(247, 199, 211, 1);
-      width: 15%;
-      float: right;
+  }
+  #new_auction_search {
+    input, label {
+      display: none;
+      width: 0;
     }
-  }
-
-
-}
-
-
-
-#new_auction_search {
-  input, label {
-    display: none;
-    width: 0;
-  }
-  #auction_search_search_term {
-    width: 60%;
-    height: 1.9em;
-    padding-left: 15%;
-    border: 2px solid rgba(241, 147, 165, 1);
-    border-radius: 1em;
-    background-image: asset-data-url("search_icon.png");
-    background-repeat: no-repeat;
-    background-position: 0 50%;
-    position: relative;
-    bottom: 0.2em;
-    right: 3em;
-    display: inline;
+    #auction_search_search_term {
+      width: 60%;
+      height: 1.9em;
+      padding-left: 15%;
+      border: 2px solid rgba(241, 147, 165, 1);
+      border-radius: 1em;
+      background-image: asset-data-url("search_icon.png");
+      background-repeat: no-repeat;
+      background-position: 0 50%;
+      position: relative;
+      bottom: 0.2em;
+      right: 3em;
+      display: inline;
+    }
   }
 }
 
@@ -254,12 +242,20 @@ $small-only: "#{$screen} and (max-width: 40em)" !default;
       a {
         color: $auction-font-color;
       }
-      #auction-search-box {
-        background-color: 4auction-bg-color;
-      }
       h3 {
         padding-right: 25%;
         color: rgba(82, 130, 27, 1)
+      }
+      #new_auction_search {
+        label {
+          display: none;
+          width: 0;
+        }
+      }
+      #auction_search_box {
+        width: 60%;
+        height: 1.9em;
+        border: 2px solid $auction-bg-color;
       }
     }
   }
@@ -274,11 +270,17 @@ $small-only: "#{$screen} and (max-width: 40em)" !default;
         color: $auction-font-color;
       }
     }
-
     #auction_sort {
       margin: 1em;
       width: 6em;
       color: $auction-font-color;
+      label {
+        display: inline;
+        color: $auction-font-color;
+      }
+      input {
+        display: none;
+      }
     }
 
     #auctions {
@@ -288,7 +290,6 @@ $small-only: "#{$screen} and (max-width: 40em)" !default;
         width: 130px;
         height: 170px;
         margin: 1em 0;
-
         .auction_image {
           background-color: $auction-bg-color;
           margin: 0 .8em 0 .8em;

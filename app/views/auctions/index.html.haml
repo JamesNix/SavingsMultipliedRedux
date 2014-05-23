@@ -10,11 +10,12 @@
 
   = render 'auction_searches/auction_sort'
 
-.auction_left
-  = render @auction_search
-.auction_right
   - if @auctions.empty?
     .alert No auctions found with this criteria.
   - else
     #auctions
       = render @auctions
+
+
+.auction_left
+  = render @auction_search

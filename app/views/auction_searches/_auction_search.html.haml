@@ -16,7 +16,7 @@
             = render child_configuration
     %h3 Limit your search:
     %hr
-    = f.input :search_term, :id => "auction-search-box"
+    = f.input :search_term, :input_html => { :id => "auction_search_box" }
     - unless auction_search.needs_child_genders?
       = f.input :child_configuration_id, as: :hidden
       = f.input :clothing_condition_id, collection: ClothingCondition.all, label: "Clothing Condition"
